@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+int main(void)
+{
+    //variable to store user's cash to change
+    float changeOriginal;
+
+    //values of coins
+    float quarter = 25;
+    float dime = 10;
+    float nickel = 5;
+    float penny = 1;
+
+    //counter stores number of coins
+    int counter = 0;
+
+    //prompt user for cash
+    printf("Change owed:\n");
+
+    //checks if change is greater than 0
+    do
+    {
+        changeOriginal = get_float();
+        if (changeOriginal < 0)
+        {
+            printf("Try again \n");
+        }
+    }
+    while (changeOriginal < 0);
+
+    //converts change to whole number
+    float changeConv = changeOriginal * 100;
+    changeConv = round(changeConv);
+
+
+//breaks amount into different coins using minimum possible
+    do
+    {
+        if (changeConv >= 25)
+        {
+            changeConv = changeConv - quarter;
+            counter = counter + 1;
+
+        }
+        else if (changeConv < 25 & changeConv >= 10 )
+        {
+            changeConv = changeConv - dime;
+            counter = counter + 1;
+        }
+        else if (changeConv < 10 & changeConv >= 5 )
+        {
+            changeConv = changeConv - nickel;
+            counter = counter + 1;
+        }
+        else if (changeConv < 5 & changeConv > 0 )
+        {
+            changeConv = changeConv - penny;
+            counter = counter + 1;
+        }
+    }
+    while (changeConv != 0 );
+
+    printf("%i\n", counter);
+
+}
+
+
+
+

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <div class="form-group">
+            <input autocomplete= "off" autofocus class="form-control" name="Title" placeholder="Title" type="text"/>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Add Book to Collection</button>
+    </form>
+{% endblock %}

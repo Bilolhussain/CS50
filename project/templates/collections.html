@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Collection
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+            {% for book in collection %}
+                <tr>
+                    <td>{{ book.Title }}</td>
+                    <td>{{ book.Price }}</td>
+                    <td>{{ book.Author }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

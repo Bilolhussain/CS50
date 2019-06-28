@@ -1,0 +1,14 @@
+    I tried to create a Kindle website which allows users to save the books available in the database and also search
+the internet using a google api. The Register and Login allows users to use the website with their own accounts.
+application.py contains all the python code that governs the website building upon the Finance model in pset7. The search function
+was implemented using the google developer website and geek code academy which especially helped in inputting the image and having
+hyperlinks attached to it. The search page is hyperlink which is only linked with the style.css file and script.js. I also
+made the lookup function in the helpers.py which takes title price and author only from the database. The issue I would like to solve
+in the future is somehow link the information given in API and use that instead of the database since the database relies on a
+constant set of data that I ended up inputting myself. I used a few csv files before but a lot of them had unneccessary attributes
+and csv file with information about books was not free to use as such I had to manually make a database.
+    In order to find the price of a book the user can simply go to quote and input the name of a book. If the book is available in the database table
+(journal1) then quote returns price of the book. You can use Add Book to save the book in your collection(which is also a database table).
+Moreover, in order to provide the user with better online reading experience, the search functionality is implemented. Since,
+this use google api the information available is basically all the google books and as such this search functionality compliments
+the user of Kindle website by allowing the user to read about books, their authors etc.

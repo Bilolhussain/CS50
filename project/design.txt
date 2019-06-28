@@ -1,0 +1,17 @@
+    The design features include the registration portal which ensures users are uniquely put in the database. The login and register
+templates have username, password, and confirm password as the variables on all of which authentication checks are run to ensure
+user is uniquely identified.
+    The login page leads to the index template which gives information about the book, author and price of the book. The index template
+extends into the layout template which has all the tabs and buttons like Logout, Add, Search etc. The Add template supports the input
+of books which are present in the table("journal2"). Due to the lack of time I was only able to put in 10 books in order to show
+that the website does work. With some brute force, I could add enough books to ensure that most of the searches by the user
+are seen in the add/quote window. Once you add a book by its title it gets saved in the collections table along with the price and
+author of the book.
+    Similarly the quote function allows user to find price of a book given the title of the book. It's implemented using two
+    templates quote and quoted. The price is returned as an object in the quoted window and I can't seem to get that to appear
+    normally but it's functional.
+    The Search tab uses jQuerry and google api key to get objects retured with information about the book like the title author and
+    hyperlinks that are attached to the image button. Unfortunately, I am unable to display the image of the individual books due
+    to some syntax issue. TThe Search functionality is built using the pset8 model of mashup which helped me link the src code with
+    the search template. Most of the search functionality is implemented in search.html and script.js. I watched online videos, used
+    stack overflow, along with tutorials on jQuery(for the script.js) and so building upon these I managed to somehow make this website.
